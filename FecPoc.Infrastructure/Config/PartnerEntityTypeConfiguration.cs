@@ -1,8 +1,9 @@
 ﻿using FecPoc.Core;
+using FecPoc.Core.Aggregates;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace FecPoc.Infrastructure
+namespace FecPoc.Infrastructure.Config
 {
     public class PartnerEntityTypeConfiguration : IEntityTypeConfiguration<Partner>
     {

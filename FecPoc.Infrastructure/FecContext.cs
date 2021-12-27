@@ -1,4 +1,5 @@
-﻿using FecPoc.Core;
+﻿using FecPoc.Core.Aggregates;
+using FecPoc.Infrastructure.Config;
 using Microsoft.EntityFrameworkCore;
 
 namespace FecPoc.Infrastructure;
