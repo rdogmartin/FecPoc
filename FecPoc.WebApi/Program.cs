@@ -1,14 +1,11 @@
-using FecPoc.Core.Services;
-using FecPoc.Infrastructure;
+using FecPoc.Core.Extensions;
 using FecPoc.Infrastructure.Extensions;
-using FecPoc.Infrastructure.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddDbContext<FecContext>();
-// builder.Services.AddInfrastructureConfig(builder.Configuration);
-builder.Services.AddScoped<PartnerRepository>();
+builder.Services.AddInfrastructureConfig(builder.Configuration);
+builder.Services.AddCoreConfig(builder.Configuration);
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

@@ -3,13 +3,12 @@ using Microsoft.EntityFrameworkCore;
 
 namespace FecPoc.Infrastructure.Repository;
 
-public abstract class Repository<TEntity, TContext> : IRepository<TEntity>
+public class Repository<TEntity> : IRepository<TEntity>
     where TEntity : class, IEntity
-    where TContext : DbContext
 {
-    private readonly TContext _context;
+    private readonly FecContext _context;
 
-    public Repository(TContext context)
+    public Repository(FecContext context)
     {
         this._context = context;
     }

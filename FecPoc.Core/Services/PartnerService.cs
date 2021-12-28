@@ -5,17 +5,17 @@ namespace FecPoc.Core.Services;
 
 public class PartnerService
 {
-    private readonly IPartnerRepository _partnerRepository;
+    private readonly IRepository<Partner> _partnerRepository;
 
-    public PartnerService(IPartnerRepository partnerRepository)
+    public PartnerService(IRepository<Partner> partnerRepository)
     {
         _partnerRepository = partnerRepository;
     }
 
-    // public async Task<IEnumerable<Partner>> GetPartners()
-    // {
-    //     var partners = await _partnerRepository.ListAsync();
-    //
-    //     return partners;
-    // }
+    public async Task<List<Partner>> GetPartners()
+    {
+        var partners = await _partnerRepository.GetAll();
+    
+        return partners;
+    }
 }

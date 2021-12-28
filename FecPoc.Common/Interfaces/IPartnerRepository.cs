@@ -2,4 +2,5 @@
 
 public interface IPartnerRepository
 {
+    void DoSpecificPartnerLogic();
 }

@@ -1,15 +1,25 @@
 using FecPoc.Core.Aggregates;
-using FecPoc.Infrastructure.Repository;
+using FecPoc.Core.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FecPoc.WebApi.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class PartnerController : FecBaseController<Partner, PartnerRepository>
+    public class PartnerController : ControllerBase
     {
-        public PartnerController(PartnerRepository repository) : base(repository)
+        private readonly PartnerService _service;
+
+        public PartnerController(PartnerService service)
         {
+            _service = service;
+        }
+
+        // GET: api/[controller]
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Partner>>> Get()
+        {
+            return await _service.GetPartners();
         }
     }
 }
