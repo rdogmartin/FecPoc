@@ -1,9 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using FecPoc.Common.Interfaces;
 using FecPoc.Core.ValueObjects;
 
 namespace FecPoc.Core.Aggregates
 {
-    public class Partner
+    public class Partner: IEntity
     {
         [MaxLength(47)]
         public Guid Id { get; set; }
