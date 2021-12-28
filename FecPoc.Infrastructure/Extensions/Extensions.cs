@@ -14,8 +14,6 @@ public static class Extensions
 
         services.AddScoped<IRepository<Partner>, Repository<Partner>>();
 
-        // services.AddScoped<IPartnerRepository, PartnerRepository>();
-
         return services;
     }
 }

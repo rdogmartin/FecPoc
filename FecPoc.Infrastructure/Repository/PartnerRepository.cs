@@ -4,16 +4,23 @@ using FecPoc.Core.Aggregates;
 namespace FecPoc.Infrastructure.Repository;
 
 /// <summary>
-/// 
+/// A repository for the <see cref="Partner" /> entity that provides DB functionality specific to partners.
+/// This can be used if the generic <see cref="IRepository&lt;Partner&gt;"/> has insufficient capability.
 /// </summary>
-public class PartnerRepository : Repository<Partner>
+/// <example>
+/// To use this, specify this class where DI is configured, then update injected locations to use
+/// <see cref="IPartnerRepository&lt;Partner&gt;" /> instead of <see cref="IRepository&lt;Partner&gt;"/>.
+/// <code>
+/// services.AddScoped&lt;IPartnerRepository&lt;Partner&gt;, PartnerRepository&gt;();
+/// </code>
+/// </example>
+public class PartnerRepository : Repository<Partner>, IPartnerRepository<Partner>
 {
     public PartnerRepository(FecContext context) : base(context)
     {
-
     }
 
-    // We can add new methods specific to the partner repository here in the future
+    // We can add methods specific to the partner repository here.
     public void DoSpecificPartnerLogic()
     {
         throw new NotImplementedException();
