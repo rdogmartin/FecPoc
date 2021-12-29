@@ -20,4 +20,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\src\FecPoc.Core\FecPoc.Core.csproj" />
+  </ItemGroup>
+
 </Project>

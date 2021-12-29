@@ -18,7 +18,7 @@ public class PartnerService
         var partnerDtos = await _partnerRepository.GetAll();
 
         var partners = partnerDtos
-            .Select(p => new Partner() { Id = p.Id, Name = p.Name })
+            .Select(p => new Partner(p.Id, p.Name))
             .ToList();
 
         return partners;

@@ -1,18 +1,17 @@
 ﻿using FecPoc.Common.Interfaces;
-using FecPoc.Core.Aggregates;
 using FecPoc.Core.Dto;
 
 namespace FecPoc.Infrastructure.Repository;
 
 /// <summary>
 /// A repository for the <see cref="PartnerDto" /> entity that provides DB functionality specific to partners.
-/// This can be used if the generic <see cref="IRepository&lt;Partner&gt;"/> has insufficient capability.
+/// This can be used if the generic <c>IRepository{Partner}</c> has insufficient capability.
 /// </summary>
 /// <example>
 /// To use this, specify this class where DI is configured, then update injected locations to use
-/// <see cref="IPartnerRepository&lt;Partner&gt;" /> instead of <see cref="IRepository&lt;Partner&gt;"/>.
+/// <c>IPartnerRepository{Partner}</c> instead of <c>IRepository{Partner}</c>.
 /// <code>
-/// services.AddScoped&lt;IPartnerRepository&lt;Partner&gt;, PartnerRepository&gt;();
+/// services.AddScoped{IPartnerRepository{Partner}, PartnerRepository}();
 /// </code>
 /// </example>
 public class PartnerRepository : Repository<PartnerDto>, IPartnerRepository<PartnerDto>
