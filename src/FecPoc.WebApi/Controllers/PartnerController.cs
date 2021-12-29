@@ -1,4 +1,4 @@
-using FecPoc.Core.Aggregates;
+﻿using FecPoc.Core.Aggregates;
 using FecPoc.Core.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -17,7 +17,7 @@ namespace FecPoc.WebApi.Controllers
 
         // GET: api/[controller]
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Partner>>> Get()
+        public async Task<ActionResult<List<Partner>>> Get()
         {
             return await _service.GetPartners();
         }

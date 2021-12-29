@@ -1,10 +1,11 @@
 ﻿using FecPoc.Common.Interfaces;
 using FecPoc.Core.Aggregates;
+using FecPoc.Core.Dto;
 
 namespace FecPoc.Infrastructure.Repository;
 
 /// <summary>
-/// A repository for the <see cref="Partner" /> entity that provides DB functionality specific to partners.
+/// A repository for the <see cref="PartnerDto" /> entity that provides DB functionality specific to partners.
 /// This can be used if the generic <see cref="IRepository&lt;Partner&gt;"/> has insufficient capability.
 /// </summary>
 /// <example>
@@ -14,7 +15,7 @@ namespace FecPoc.Infrastructure.Repository;
 /// services.AddScoped&lt;IPartnerRepository&lt;Partner&gt;, PartnerRepository&gt;();
 /// </code>
 /// </example>
-public class PartnerRepository : Repository<Partner>, IPartnerRepository<Partner>
+public class PartnerRepository : Repository<PartnerDto>, IPartnerRepository<PartnerDto>
 {
     public PartnerRepository(FecContext context) : base(context)
     {

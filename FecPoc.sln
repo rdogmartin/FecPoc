@@ -3,18 +3,24 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FecPoc.Infrastructure", "FecPoc.Infrastructure\FecPoc.Infrastructure.csproj", "{5CCE54E6-4C63-4467-8CA9-3CE82BD48F17}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FecPoc.Infrastructure", "src\FecPoc.Infrastructure\FecPoc.Infrastructure.csproj", "{5CCE54E6-4C63-4467-8CA9-3CE82BD48F17}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FecPoc.Core", "FecPoc.Core\FecPoc.Core.csproj", "{1C54F03F-4220-4E3B-8A77-34D17CCEC40B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FecPoc.Core", "src\FecPoc.Core\FecPoc.Core.csproj", "{1C54F03F-4220-4E3B-8A77-34D17CCEC40B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FecPoc.WebApi", "FecPoc.WebApi\FecPoc.WebApi.csproj", "{570FC38B-D004-4844-AAC6-C796B877CFF8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FecPoc.WebApi", "src\FecPoc.WebApi\FecPoc.WebApi.csproj", "{570FC38B-D004-4844-AAC6-C796B877CFF8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FecPoc.Common", "FecPoc.Common\FecPoc.Common.csproj", "{973C6A45-9093-4397-99AC-23FCEE8C0F6D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FecPoc.Common", "src\FecPoc.Common\FecPoc.Common.csproj", "{973C6A45-9093-4397-99AC-23FCEE8C0F6D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E2C7EDD5-FF84-4E46-A486-078668B831D9}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{40D75A57-D057-45BD-80D4-4AE1AD588803}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{A1FFC3A4-AADB-4FD3-8940-89D15FA877A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FecPoc.UnitTests", "FecPoc.UnitTests\FecPoc.UnitTests.csproj", "{EC290EDE-B47F-40F3-98E6-C8DB52697977}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,9 +44,20 @@ Global
 		{973C6A45-9093-4397-99AC-23FCEE8C0F6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{973C6A45-9093-4397-99AC-23FCEE8C0F6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{973C6A45-9093-4397-99AC-23FCEE8C0F6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC290EDE-B47F-40F3-98E6-C8DB52697977}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC290EDE-B47F-40F3-98E6-C8DB52697977}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC290EDE-B47F-40F3-98E6-C8DB52697977}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC290EDE-B47F-40F3-98E6-C8DB52697977}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5CCE54E6-4C63-4467-8CA9-3CE82BD48F17} = {40D75A57-D057-45BD-80D4-4AE1AD588803}
+		{1C54F03F-4220-4E3B-8A77-34D17CCEC40B} = {40D75A57-D057-45BD-80D4-4AE1AD588803}
+		{570FC38B-D004-4844-AAC6-C796B877CFF8} = {40D75A57-D057-45BD-80D4-4AE1AD588803}
+		{973C6A45-9093-4397-99AC-23FCEE8C0F6D} = {40D75A57-D057-45BD-80D4-4AE1AD588803}
+		{EC290EDE-B47F-40F3-98E6-C8DB52697977} = {A1FFC3A4-AADB-4FD3-8940-89D15FA877A3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5CE2C88F-44A5-4CE2-80D5-71483475ADE6}

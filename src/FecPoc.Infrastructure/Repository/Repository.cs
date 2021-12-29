@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 namespace FecPoc.Infrastructure.Repository;
 
 public class Repository<TEntity> : IRepository<TEntity>
-    where TEntity : class, IEntity
+    where TEntity : class, IDatabaseEntity
 {
     private readonly FecContext _context;
 

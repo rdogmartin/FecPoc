@@ -1,6 +1,6 @@
 ﻿namespace FecPoc.Common.Interfaces;
 
-public interface IRepository<T> where T : class, IEntity
+public interface IRepository<T> where T : class, IDatabaseEntity
 {
     Task<List<T>> GetAll();
     Task<T?> Get(Guid id);

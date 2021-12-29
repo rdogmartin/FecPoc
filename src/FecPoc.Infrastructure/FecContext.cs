@@ -1,4 +1,5 @@
 ﻿using FecPoc.Core.Aggregates;
+using FecPoc.Core.Dto;
 using FecPoc.Infrastructure.Config;
 using Microsoft.EntityFrameworkCore;
 
@@ -6,7 +7,7 @@ namespace FecPoc.Infrastructure;
 
 public class FecContext : DbContext
 {
-    public DbSet<Partner> Partners => Set<Partner>();
+    public DbSet<PartnerDto> Partners => Set<PartnerDto>();
 
     public FecContext(DbContextOptions<FecContext> options) : base(options)
     {
