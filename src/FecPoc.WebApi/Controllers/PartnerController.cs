@@ -8,9 +8,9 @@ namespace FecPoc.WebApi.Controllers
     [Route("api/[controller]")]
     public class PartnerController : ControllerBase
     {
-        private readonly PartnerService _service;
+        private readonly PartnerDataService _service;
 
-        public PartnerController(PartnerService service)
+        public PartnerController(PartnerDataService service)
         {
             _service = service;
         }
