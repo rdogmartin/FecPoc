@@ -33,7 +33,7 @@ public class Repository<TEntity> : IRepository<TEntity>
         return entity;
     }
 
-    public async Task<TEntity?> Get(Guid id)
+    public async Task<TEntity?> Find(Guid id)
     {
         return await _context.Set<TEntity>().FindAsync(id);
     }
