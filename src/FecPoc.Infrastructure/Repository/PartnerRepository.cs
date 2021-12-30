@@ -14,14 +14,14 @@ namespace FecPoc.Infrastructure.Repository;
 /// services.AddScoped{IPartnerRepository{Partner}, PartnerRepository}();
 /// </code>
 /// </example>
-public class PartnerRepository : Repository<PartnerDto>, IPartnerRepository<PartnerDto>
+public class PartnerRepository : Repository<PartnerDto>, IPartnerRepository
 {
     public PartnerRepository(FecContext context) : base(context)
     {
     }
 
     // We can add methods specific to the partner repository here.
-    public void DoSpecificPartnerLogic()
+    public IEnumerable<PartnerDto> GetActivePartners()
     {
         throw new NotImplementedException();
     }

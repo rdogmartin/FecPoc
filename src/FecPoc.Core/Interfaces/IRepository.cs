@@ -4,7 +4,7 @@
 /// Provides functionality for interacting with a database table.
 /// </summary>
 /// <typeparam name="T">An entity that maps to a row in a database table.</typeparam>
-public interface IRepository<T> where T : class, Core.Interfaces.IDatabaseEntity
+public interface IRepository<T> where T : class, IDatabaseEntity
 {
     /// <summary>
     /// Gets all rows.

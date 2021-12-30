@@ -7,9 +7,7 @@ namespace FecPoc.Core.Aggregates;
 /// </summary>
 public class Partner
 {
-    /// <summary>
-    /// Initializes an instance.
-    /// </summary>
+    /// <summary>Initializes an instance with the specified values.</summary>
     /// <param name="id">A value that uniquely identifies this partner.</param>
     /// <param name="name">The partner's name.</param>
     public Partner(Guid id, PersonName name)

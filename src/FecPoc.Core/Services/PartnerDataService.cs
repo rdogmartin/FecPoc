@@ -15,7 +15,7 @@ public class PartnerDataService
     /// Initializes an instance of the class.
     /// </summary>
     /// <param name="partnerRepository">The repository.</param>
-    public PartnerDataService(IRepository<PartnerDto> partnerRepository)
+    public PartnerDataService(IPartnerRepository partnerRepository)
     {
         _partnerRepository = partnerRepository;
     }

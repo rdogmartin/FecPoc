@@ -1,5 +1,4 @@
-﻿using FecPoc.Core.Dto;
-using FecPoc.Core.Interfaces;
+﻿using FecPoc.Core.Interfaces;
 using FecPoc.Infrastructure.Repository;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -12,7 +11,8 @@ public static class Extensions
     {
         services.AddDbContext<FecContext>();
 
-        services.AddScoped<IRepository<PartnerDto>, Repository<PartnerDto>>();
+        // services.AddScoped<IRepository<PartnerDto>, Repository<PartnerDto>>();
+        services.AddScoped<IPartnerRepository, PartnerRepository> ();
 
         return services;
     }
