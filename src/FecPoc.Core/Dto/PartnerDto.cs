@@ -1,5 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using FecPoc.Common.Interfaces;
+using FecPoc.Core.Interfaces;
 using FecPoc.Core.ValueObjects;
 
 namespace FecPoc.Core.Dto;

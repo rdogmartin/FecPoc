@@ -1,5 +1,5 @@
-﻿using FecPoc.Common.Interfaces;
-using FecPoc.Core.Dto;
+﻿using FecPoc.Core.Dto;
+using FecPoc.Core.Interfaces;
 
 namespace FecPoc.Infrastructure.Repository;
 

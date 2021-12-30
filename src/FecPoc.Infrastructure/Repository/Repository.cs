@@ -1,4 +1,4 @@
-﻿using FecPoc.Common.Interfaces;
+﻿using FecPoc.Core.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 namespace FecPoc.Infrastructure.Repository;

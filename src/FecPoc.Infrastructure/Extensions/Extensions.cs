@@ -1,6 +1,5 @@
-﻿using FecPoc.Common.Interfaces;
-using FecPoc.Core.Aggregates;
-using FecPoc.Core.Dto;
+﻿using FecPoc.Core.Dto;
+using FecPoc.Core.Interfaces;
 using FecPoc.Infrastructure.Repository;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;

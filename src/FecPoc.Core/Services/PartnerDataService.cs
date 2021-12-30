@@ -1,6 +1,6 @@
-﻿using FecPoc.Common.Interfaces;
-using FecPoc.Core.Aggregates;
+﻿using FecPoc.Core.Aggregates;
 using FecPoc.Core.Dto;
+using FecPoc.Core.Interfaces;
 
 namespace FecPoc.Core.Services;
 
