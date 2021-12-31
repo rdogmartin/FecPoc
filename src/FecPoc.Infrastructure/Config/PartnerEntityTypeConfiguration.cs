@@ -4,8 +4,12 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace FecPoc.Infrastructure.Config;
 
+/// <summary>
+/// Specifies configuration for the <see cref="PartnerDto" /> database entity.
+/// </summary>
 public class PartnerEntityTypeConfiguration : IEntityTypeConfiguration<PartnerDto>
 {
+    /// <inheritdoc />
     public void Configure(EntityTypeBuilder<PartnerDto> builder)
     {
         // To configure Name as a value object, we could just say this: builder.OwnsOne(p => p.Name);

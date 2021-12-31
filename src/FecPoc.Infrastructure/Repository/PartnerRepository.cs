@@ -16,11 +16,15 @@ namespace FecPoc.Infrastructure.Repository;
 /// </example>
 public class PartnerRepository : Repository<PartnerDto>, IPartnerRepository
 {
+    /// <summary>
+    /// Initializes an instance of the class.
+    /// </summary>
+    /// <param name="context">The database context.</param>
     public PartnerRepository(FecContext context) : base(context)
     {
     }
 
-    // We can add methods specific to the partner repository here.
+    /// <inheritdoc />
     public IEnumerable<PartnerDto> GetActivePartners()
     {
         throw new NotImplementedException();
