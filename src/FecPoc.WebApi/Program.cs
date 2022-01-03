@@ -1,10 +1,10 @@
-using FecPoc.Core.Extensions;
+﻿using FecPoc.Core.Extensions;
 using FecPoc.Infrastructure.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddInfrastructureConfig(builder.Configuration);
+builder.Services.AddInfrastructureConfig(builder.Configuration, builder.Environment.EnvironmentName);
 builder.Services.AddCoreConfig(builder.Configuration);
 
 builder.Services.AddControllers();
