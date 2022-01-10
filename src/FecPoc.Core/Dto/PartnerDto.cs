@@ -5,7 +5,7 @@ using FecPoc.Core.ValueObjects;
 namespace FecPoc.Core.Dto;
 
 /// <inheritdoc />
-public class PartnerDto: IDatabaseEntity
+public class PartnerDto : IDatabaseEntity
 {
     /// <inheritdoc />
     [MaxLength(47)]

@@ -40,7 +40,8 @@ public static class Extensions
 
                 cfg.EnableSensitiveDataLogging();
 
-                if (env != "Production") {
+                if (env != "Production")
+                {
                     // There's a perf cost to this so let's do it only in lower environments
                     cfg.EnableDetailedErrors();
                 }
@@ -48,7 +49,7 @@ public static class Extensions
             );
 
         // services.AddScoped<IRepository<PartnerDto>, Repository<PartnerDto>>();
-        services.AddScoped<IPartnerRepository, PartnerRepository> ();
+        services.AddScoped<IPartnerRepository, PartnerRepository>();
 
         return services;
     }

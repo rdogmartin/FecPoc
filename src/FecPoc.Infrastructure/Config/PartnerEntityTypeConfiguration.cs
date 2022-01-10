@@ -18,7 +18,7 @@ public class PartnerEntityTypeConfiguration : IEntityTypeConfiguration<PartnerDt
         builder.OwnsOne(p => p.Name).Property(p => p.First)
             .HasColumnName("FirstName")
             .HasMaxLength(50); // Doesn't work to put MaxLength attribute on this property in the record, so we do so here.
-            
+
         builder.OwnsOne(p => p.Name).Property(p => p.Last)
             .HasColumnName("LastName")
             .HasMaxLength(50);
